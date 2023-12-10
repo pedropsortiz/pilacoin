@@ -1,9 +1,9 @@
 import "./style.css";
 
-export function Mainbody(){
+export function Mainbody(props){
     return(
         <div className="mainbody">
-            alguma coisa
+            {props.children}
         </div>
     )
 }
