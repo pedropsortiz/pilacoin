@@ -8,16 +8,16 @@ export function Menu(){
                 <Link to="/" className="menu"> Seus Pilas </Link>
             </nav>
             <nav className="menu">
-                <Link to="/" className="menu"> Pilas em Validação </Link>
+                <Link to="/pilasValidacao" className="menu"> Pilas em Validação </Link>
             </nav>
             <nav className="menu">
-                <Link to="/" className="menu"> Pilas Validados </Link>
+                <Link to="/pilasValidados" className="menu"> Pilas Validados </Link>
             </nav>
             <nav className="menu">
-                <Link to="/" className="menu"> Blocos Descobertos </Link>
+                <Link to="/blocosDescobertos" className="menu"> Blocos Descobertos </Link>
             </nav>
             <nav className="menu">
-                <Link to="/" className="menu"> Blocos Validados </Link>
+                <Link to="/blocosValidados" className="menu"> Blocos Validados </Link>
             </nav>      
         </div>
     )

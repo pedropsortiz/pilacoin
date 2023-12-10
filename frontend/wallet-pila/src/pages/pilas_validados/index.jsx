@@ -1,6 +1,6 @@
 import "./style.css";
 
-export function Pilas_Validados(){
+export function PilasValidados(){
     return (
         <div className="content">
             <h1>Pilas Validados</h1>

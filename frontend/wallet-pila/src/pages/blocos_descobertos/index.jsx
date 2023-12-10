@@ -1,6 +1,6 @@
 import "./style.css";
 
-export function Blocos_Descobertos(){
+export function BlocosDescobertos(){
     return (
         <div className="content">
             <h1>Blocos Descobertos</h1>
