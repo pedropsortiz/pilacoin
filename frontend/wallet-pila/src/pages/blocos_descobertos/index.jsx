@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './style.css';
 
 export function BlocosDescobertos() {
   const [responseData, setResponseData] = useState(null);

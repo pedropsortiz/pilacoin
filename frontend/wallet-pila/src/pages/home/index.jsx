@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
-import "./style.css";
 import { BACKEND_URL } from "../../config";
 import axios from "axios";
 
