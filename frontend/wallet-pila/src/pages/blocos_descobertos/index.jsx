@@ -1,17 +1,37 @@
-import "./style.css";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import './style.css';
 
-export function BlocosDescobertos(){
-    return (
-        <div className="content">
-            <h1>Blocos Descobertos</h1>
-            ============================================<br/>
-            Minerou Bloco<br/>
-            72370646489160107696267981103137786218740691089245743012824608409080307
-            110427941548649020598956093796432407239217743554726184882600387580788735
-            17328<br/>
-            ============================================<br/>
-            Bloco descoberto<br/>
-            ============================================<br/>
-        </div>
-    );
+export function BlocosDescobertos() {
+  const [responseData, setResponseData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:8080/logsMineraBloco');
+        setResponseData(response.data);
+      } catch (error) {
+        console.error('Erro ao obter dados da API:', error);
+      }
+    };
+
+    fetchData();
+  }, []); 
+
+  return (
+    <div className="content">
+      <h1>Blocos Descobertos</h1>
+      {responseData ? (
+        <>
+          <p>Minerou Bloco</p>
+          <p>{responseData.hash}</p>
+          <p>{responseData.blockNumber}</p>
+          <p>{responseData.data}</p>
+          <p>Bloco descoberto</p>
+        </>
+      ) : (
+        <p>Carregando dados...</p>
+      )}
+    </div>
+  );
 }

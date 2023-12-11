@@ -27,7 +27,6 @@ export function Home() {
   const handleTransfer = async (pila) => {
     try {
       const selectedPila = pila;
-      console.log(selectedPila)
     } catch (error) {
       console.log("Error fetching pila: " + error);
     }
