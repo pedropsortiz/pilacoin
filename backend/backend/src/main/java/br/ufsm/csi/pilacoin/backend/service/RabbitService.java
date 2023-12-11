@@ -45,8 +45,7 @@ public class RabbitService {
     //@RabbitListener(queues = "pedromarina")
     //public void msgs(@Payload String msg) {
     //    System.out.println("-=+=".repeat(10)+"\n"+msg+"\n"+"-=+=".repeat(10));
-    //}
-
+    //}zzz
 
     @RabbitListener(queues = "report")
     public void report(@Payload String report){

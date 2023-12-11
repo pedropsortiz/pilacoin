@@ -93,7 +93,7 @@ public class MainController {
                         .dataTransacao(new Date()).build();
                 tranferir.setAssinatura(PilaUtil.geraAssinatura(tranferir));
                 rabbitTemplate.convertAndSend("transferir-pila", objectMapper.writeValueAsString(tranferir));
-                //pilacoinRepository.delete(pilas.get(i));
+                pilacoinRepository.delete(pilas.get(i));
             }
         }
     }
